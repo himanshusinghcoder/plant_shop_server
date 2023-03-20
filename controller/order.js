@@ -16,7 +16,7 @@ const cancelOrder = async (req, res) => {
     const {order_id} = req.params
     const data = req.body
     const result = await cancelOrderService(order_id, data)
-    res.json({status: 'success', message: result})
+    res.json({status: 'success', message: result, message: 'Order Successfully Cancel'})
 }
 
 

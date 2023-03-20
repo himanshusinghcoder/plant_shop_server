@@ -9,7 +9,7 @@ const getBannerImages = async (req, res) => {
 const addBannerImages = async (req, res) => {
     const data = req.body
     const result = await addBannerImage(data)
-    res.json({status: 'success', data: result, message: 'Success'})
+    res.json({status: 'success', data: result, message: 'Banner Added Successfully'})
 }
 
 module.exports = {

@@ -3,7 +3,7 @@ const { addProductService, getProductService, deleteProductService, updateProduc
 const addProduct = async (req,res) => {
     const data = req.body
     const result = await addProductService(data)
-    res.json({status: 'success', data: result})
+    res.json({status: 'success', data: result, message: 'Product Successfully Deleted' })
 }
 
 const getProducts = async (req,res) => {
@@ -15,14 +15,14 @@ const getProducts = async (req,res) => {
 const deleteProduct = async (req, res) => {
     const { product_id } = req.params
     const result = await deleteProductService(product_id)
-    res.json({status: 'success', data: result})
+    res.json({status: 'success', data: result , message: 'Product Successfully Deleted'})
 }
 
 const updateProduct = async (req, res) => {
     const { product_id } = req.params
     const data = req.body
     const result = await updateProductService(product_id, data)
-    res.json({status: 'success', data: result, message: 'update successfully'})
+    res.json({status: 'success', data: result, message: 'Product Update Successfully'})
 }
 
 const getProduct = async (req, res) => {
